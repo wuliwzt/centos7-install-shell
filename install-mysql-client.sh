@@ -19,6 +19,6 @@ DOWNLOAD_FILE_NAME="${APP_NAME_VERSION}-1.el7.${SYS}.rpm"
 APP_DOWNLOAD_FILE="${DOWNLOAD_DIR}/${DOWNLOAD_FILE_NAME}"
 DOWLOAD_URL="http://codingdie01-1253506722.costj.myqcloud.com/download/centos/${DOWNLOAD_FILE_NAME}"
 if [ ! -f ${APP_DOWNLOAD_FILE} ]; then
- wget -O ${APP_DOWNLOAD_FILE} -c ${DOWLOAD_URL}
+ wget -O ${APP_DOWNLOAD_FILE} -c ${DOWLOAD_URL} --nodeps --force
 fi
  rpm -ivh ${APP_DOWNLOAD_FILE}
